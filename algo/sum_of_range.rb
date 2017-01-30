@@ -3,7 +3,20 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+sum = 0
+  if array[0] > array[1]
+    array = array[1]..array[0]
+    array.each do |element|
+      sum = sum + element
+    end 
+    return sum
+  else 
+    array = array[0]..array[1]
+    array.each do |element|
+      sum = sum + element
+    end 
+    return sum
+  end
 end
 
 # Driver code - don't touch anything below this line.
